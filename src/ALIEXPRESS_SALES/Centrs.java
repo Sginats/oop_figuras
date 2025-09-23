@@ -1,10 +1,22 @@
 package ALIEXPRESS_SALES;
 
 public class Centrs {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	// Atribūti
+	public int x, y;
+	
+	// Konstruktors
+	public Centrs(int x, int y) {
+		this.x = x;
+		this.y = y;
 	}
-
+	
+	// Metodes
+	public String izvaditKoordinatas() {
+		return "Centra punkts atrodas:\n x= " + x + ", y= " + y + ".";
+	}
+	
+	public void parvietot (int koordX, int koordY) {
+		x += koordX;
+		y += koordY;
+	}
 }
