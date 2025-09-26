@@ -1,9 +1,18 @@
 package ALIEXPRESS_SALES;
+import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+
+import uzd1.MinkuTante;
 public class Figuras {
+static ArrayList <Centrs> centraObjekts = new ArrayList<>();
+static ArrayList <Cetrsturis> cetrsturaObjekti = new ArrayList<>();
+static ArrayList <Aplis> aplaObjekti = new ArrayList<>();
+static ArrayList <Trijsturis> trijsturaObjekti = new ArrayList<>();
 
+static	String []objektuPogas = {"Centrs", "Četrstūris", "Aplis","Trijstūris","Atgriezties"};
 	public static void main(String[] args) {
-		// Izveido Centrs objektu
+		/*/ Izveido Centrs objektu
 		Centrs centraP1 = new Centrs(-10, 12);
 		System.out.println(centraP1.izvaditKoordinatas());
 		centraP1.parvietot(5, -2);
@@ -26,6 +35,29 @@ public class Figuras {
 		aplis1.punkts.izvaditKoordinatas()+
 		"\nLaukums: "+aplis1.rLaukums()+"cm2"+
 		"\nRiņķa līnijas garums: "+aplis1.rLGarums()+"cm");
+		*/
+		
+		int izvele, poga;
+	
+		do {
+			izvele = MinkuTante.skaitlaParbaude("Ko vēlies darīt\n"
+													+ "0 - Apturēt\n"
+													+ "1 - Izveidot objektu\n"
+													+ "2 - Aplūkot objektus\n"
+													+ "3 - Izsaukt metodi", 0, 3);
+			if(izvele==-1)
+				izvele = 0;
+			switch(izvele) {
+			case 0:
+				JOptionPane.showMessageDialog(null,
+				"Programma aptureta!", "Brīdinājums", JOptionPane.WARNING_MESSAGE);
+				break;
+			case 1:
+				OIzveide.izveidotObjektu(centraObjekts, cetrsturaObjekti,
+						aplaObjekti, trijsturaObjekti);
+				break;
+			}
+		}while (izvele !=0);
 	}
 
 }
