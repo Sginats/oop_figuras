@@ -53,8 +53,7 @@ static	String []objektuPogas = {"Centrs", "Četrstūris", "Aplis","Trijstūris",
 				"Programma aptureta!", "Brīdinājums", JOptionPane.WARNING_MESSAGE);
 				break;
 			case 1:
-				OIzveide.izveidotObjektu(centraObjekts, cetrsturaObjekti,
-						aplaObjekti, trijsturaObjekti);
+				OIzveide.izveidotObjektu();
 				break;
 			}
 		}while (izvele !=0);
